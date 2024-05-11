@@ -10,6 +10,7 @@ def index():
     if request.method == 'POST':
         input_text = request.form['input_text']
         return render_template('index.html', input_text=input_text)
+    
     return render_template('index.html', title=title, message=message, input_text=None)
 
 if __name__ == '__main__':
