@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{{title}}</title>
+  </head>
+  <body class="">
+    <div class="w-full h-screen">
+      <h1
+        class="flex justify-center items-center font-bold text-xl text-red-500"
+      >
+        Input Text dan Tampilkan Kembali
+      </h1>
+
+      <div class="flex flex-row justify-center items-center mt-4 space-x-6">
+        <div>
+          <form method="POST">
+            <label class="" for="input_text">Input Text:</label><br />
+            <input
+              class="border-2 border-black rounded-xl"
+              type="text"
+              id="input_text"
+              name="input_text"
+            /><br />
+            <button class="border-2 border-black rounded-xl mt-4" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <div>
+          {% if input_text %}
+          <h1 class="font-bold text-xl text-green-500">
+            Text yang Dimasukkan:
+          </h1>
+          <p>{{ input_text }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
